@@ -1,0 +1,48 @@
+{
+    "response" : {
+        "200": {
+            "description": "Successful response",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": { "type": "number" },
+                            "name": { "type": "string" },
+                            "description": { "type": "string" }
+                        },
+                        "required": [ "id", "name", "description" ]
+                    }
+                }
+            }
+        },
+        "404": {
+            "description": "Task not found",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "message": { "type": "string" }
+                        },
+                        "required": [ "message" ]
+                    }
+                }
+            }
+        },
+        "500": {
+            "description": "Internal server error",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "message": { "type": "string" }
+                        },
+                        "required": [ "message" ]
+                    }
+                }
+            }
+        }
+    }
+}
