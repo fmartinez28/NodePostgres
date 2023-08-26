@@ -52,6 +52,9 @@ profile-*
 .vscode
 *code-workspace
 
+# visual studio
+.vs
+
 # clinic
 profile*
 *clinic*
