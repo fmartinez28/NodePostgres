@@ -1,0 +1,19 @@
+<%- include('taskViewer/head.html'); -%>
+
+<body>
+
+<main>
+	<h1> Visualizador de Tareas </h1>
+	<h2> Tareas: </h2>
+	<ul>
+	<% tasks.forEach(function(task){ %>
+		<li>
+			<h3> <%= task.name %>: </h3>
+			<p> <%= task.description %> </p>
+		</li>
+		<% }); %>
+	</ul>
+<main>
+
+</body>
+</html>
