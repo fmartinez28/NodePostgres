@@ -1,0 +1,44 @@
+.cancelar,
+.crear-task {
+    padding: 0 20px;
+    background-color: #140941;
+    color: #ff1147;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    border: 3px solid #ff1147;
+    box-shadow: 0 5px 15px rgba(20, 9, 65, .4);
+    font-size: 16px;
+    transition: all 0.1s ease-in;
+}
+
+.cancelar:hover,
+.crear-task:hover {
+    background-color: #2b138d;
+    font-size: 18px;
+}
+
+.crear-task:hover {
+    color: white;
+    background-color: limegreen;
+    border-color: white;
+}
+
+.etiqueta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    filter: drop-shadow(5px 5px 0.70rem #03010d);
+    margin-bottom: 50px;
+}
+
+.text-input {
+    width: 100%;
+    border: 3px solid #ff1147;
+    box-shadow: 0 5px 15px rgba(20, 9, 65, .4);
+    border-radius: 5px;
+    font-family: Lato;
+    font-size: 16px;
+}
+
+.text-input:active {
+    border: 3px solid #ff1147;
+}

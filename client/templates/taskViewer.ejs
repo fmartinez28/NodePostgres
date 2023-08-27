@@ -2,7 +2,8 @@
 
 <html lang="es">
 
-<%- include('taskViewer/head.html'); -%>
+<%const title = "Visualizador de Tareas";%>
+<%- include('head.ejs', {title}); -%>
 
 <body>
 
@@ -29,7 +30,7 @@
 		</section>
 	</main>
 
-	<button class="nueva-task">
+	<button class="nueva-task" onclick="window.location.href='/new';">
 		<p>+ Nueva Tarea</p>
 	</button>
 </body>

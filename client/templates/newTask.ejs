@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<%const title = "Crear Nueva Tarea";%>
+<%- include('head.ejs', {title}); -%>
+
+<body>
+
+    <main>
+        <header>
+            <hr class="linea-bonita" />
+            <h1> Crear nueva tarea </h1>
+        </header>
+        <section>
+            <form id="taskForm">
+                <label for="name" class="etiqueta">Name:<br /></label>
+                <input type="text" id="name" name="name" required class="text-input"><br><br>
+                <label for="description" class="etiqueta">Description:<br /></label>
+                <input id="description" name="description" required class="text-input"></input><br><br>
+                <button type="submit" class="crear-task">Crear Tarea</button>
+                <input type="button" onclick="window.location.href='/';" value="Cancelar" class="cancelar" />
+            </form>
+            <script>
+                const form = document.getElementById('taskForm');
+                form.addEventListener('submit', async (event) => {
+                    event.preventDefault();
+
+                    const name = document.getElementById('name').value;
+                    const description = document.getElementById('description').value;
+
+                    const data = {
+                        name: name,
+                        description: description
+                    };
+
+                    try {
+                        const response = await fetch('http://localhost:3000/tasks', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        });
+
+                        const responseData = await response.json();
+                        console.log(responseData);
+                    } catch (error) {
+                        console.error('Error:', error);
+                    }
+                    window.location.href = '/';
+                });
+            </script>
+            <hr class="linea-bonita" style="margin-left: 0px; margin-top: 50px;" />
+        </section>
+    </main>
+
+</body>
+</html>

@@ -34,4 +34,5 @@ export default async function (fastify, opts) {
     root: path.join(__dirname, 'public'), 
     prefix: '/public/' 
   });
+
 }

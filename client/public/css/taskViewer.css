@@ -101,13 +101,17 @@ ul li p {
 .botones-tasks {
     margin-left: 255px;
     margin-bottom: 15px;
+    display: inline-flex;
+    flex-direction:row;
+    align-content: flex-end;
+}
+
+.editar-task {
+    margin-right: 10px;
 }
 
 .editar-task,
 .eliminar-task {
-    padding: 5px;
-    padding-right: 12px;
-    margin-right: 10px;
     background-color: #140941;
     color: white;
     border-radius: 5px;
