@@ -1,19 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
 <%- include('taskViewer/head.html'); -%>
 
 <body>
 
-<main>
-	<h1> Visualizador de Tareas </h1>
-	<h2> Tareas: </h2>
-	<ul>
-	<% tasks.forEach(function(task){ %>
-		<li>
-			<h3> <%= task.name %>: </h3>
-			<p> <%= task.description %> </p>
-		</li>
-		<% }); %>
-	</ul>
-<main>
+	<main>
+		<header>
+			<hr class="linea-bonita"/>
+			<h1> Visualizador de Tareas </h1>
+		</header>
+		<section>
+			<h2> Tareas: </h2>
+			<ul>
+				<% tasks.forEach(function(task){ %>
+				<li>
+					<h3> &#127775; <%= task.name %>: </h3>
+					<p> <%= task.description %> </p>
+					<div class="botones-tasks">
+						<button class="editar-task">&#9999;&#65039; Editar</button>
+						<button class="eliminar-task">&#128465;&#65039; Eliminar</button>
+					</div>
+				</li>
+				<% }); %>
+			</ul>
+			<hr class="linea-bonita" style="margin-left: 0px; margin-top: 100px;"/>
+		</section>
+	</main>
 
+	<button class="nueva-task">
+		<p>+ Nueva Tarea</p>
+	</button>
 </body>
 </html>
