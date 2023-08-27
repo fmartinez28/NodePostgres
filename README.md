@@ -1,16 +1,17 @@
 # NodePostgres
 
-## CÛdigo fuente de la p·gina:
+## C√≥digo fuente de la p√°gina:
 
-`/api/templates/taskViewer.ejs`
+`/client/templates/taskViewer.ejs`
 
-## CSS de la p·gina:
+## CSS de la p√°gina:
 
-`/api/public/css/taskViewer.css`
+`/client/public/css/taskViewer.css`
 
 ## Ruta:
 
-`http://localhost:3000/`
+`API: http://localhost:3000/`
+`Front: http://localhost:9000/`
 
 ## "Endpoint":
 
