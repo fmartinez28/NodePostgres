@@ -123,3 +123,9 @@ ul li p {
 .eliminar-task:hover {
     background-color: #2b138d;
 }
+
+.hidden {
+    font-size: 0;
+    width: 0;
+    height: 0;
+}

@@ -17,11 +17,12 @@
 			<ul>
 				<% tasks.forEach(function(task){ %>
 				<li>
+					<div class="hidden"><%=task.id%></div>
 					<h3> &#127775; <%= task.name %>: </h3>
 					<p> <%= task.description %> </p>
 					<div class="botones-tasks">
-						<button class="editar-task">&#9999;&#65039; Editar</button>
-						<button class="eliminar-task">&#128465;&#65039; Eliminar</button>
+						<button class="editar-task" onclick="window.location.href=`/edit/<%=task.id%>`;">&#9999;&#65039; Editar</button>
+						<button class="eliminar-task" onclick="eliminar(<%= task.id %>);">&#128465;&#65039; Eliminar</button>
 					</div>
 				</li>
 				<% }); %>
@@ -33,5 +34,14 @@
 	<button class="nueva-task" onclick="window.location.href='/new';">
 		<p>+ Nueva Tarea</p>
 	</button>
+
+	<script>
+        const eliminar = async (id) => {
+			const response = await fetch(`http://localhost:3000/tasks/${id}`, {
+				method: 'DELETE'
+			});
+			window.location.reload(true);
+		}
+	</script>
 </body>
 </html>
