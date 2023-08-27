@@ -7,6 +7,12 @@ export default async function (fastify, opts) {
         const res = await query.rows;
         return res;
     });
+    fastify.get('/tasks/:id', async function (request, reply) {
+        const { id } = request.params;
+        const query = await pool.query(`SELECT * FROM Tasks WHERE Id = ${id};`);
+        const res = await query.rows;
+        return res[0];
+    })
     fastify.post('/tasks', async function (request, reply) {
         const name = request.body.name;
         const description = request.body.description;

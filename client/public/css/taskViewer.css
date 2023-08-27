@@ -117,6 +117,7 @@ ul li p {
     border-radius: 5px;
     border: 2px solid #ff1147;
     transition: all 0.1s ease-in;
+    padding: 5px 10px;
 }
 
 .editar-task:hover,

@@ -10,18 +10,19 @@
     <main>
         <header>
             <hr class="linea-bonita" />
-            <h1> Crear nueva tarea </h1>
+            <h1> Editar una tarea </h1>
         </header>
         <section>
             <form id="taskForm">
                 <label for="name" class="etiqueta">Nombre:<br /></label>
-                <input type="text" id="name" name="name" required class="text-input"><br><br>
+                <input id="name" name="name" type="text" value="<%=task.name%>" required class="text-input"><br><br>
                 <label for="description" class="etiqueta">Descripcion:<br /></label>
-                <input id="description" name="description" required class="text-input"><br><br>
-                <button type="submit" class="crear-task">Crear Tarea</button>
+                <input id="description" name="description" value="<%=task.description%>" required class="text-input"><br><br>
+                <button type="submit" class="crear-task">Guardar cambios</button>
                 <input type="button" onclick="window.location.href='/';" value="Cancelar" class="cancelar" />
             </form>
             <script>
+
                 const form = document.getElementById('taskForm');
                 form.addEventListener('submit', async (event) => {
                     event.preventDefault();
@@ -35,8 +36,8 @@
                     };
 
                     try {
-                        const response = await fetch('http://localhost:3000/tasks', {
-                            method: 'POST',
+                        const response = await fetch('http://localhost:3000/tasks/<%=task.id%>', {
+                            method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json'
                             },
