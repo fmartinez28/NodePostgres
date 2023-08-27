@@ -1,7 +1,6 @@
 import path from 'path'
 import AutoLoad from '@fastify/autoload'
 import { fileURLToPath } from 'url'
-import fastifyStatic from '@fastify/static';
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -28,10 +27,4 @@ export default async function (fastify, opts) {
     dir: path.join(__dirname, 'routes'),
     options: Object.assign({}, opts)
   })
-
-  // registrar el directorio de /public para servir el css
-  fastify.register(fastifyStatic, {
-      root: path.join(__dirname, 'public'), 
-      prefix: '/public/' 
-  });
 }
