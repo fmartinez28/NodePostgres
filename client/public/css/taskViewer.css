@@ -1,15 +1,27 @@
+:root {
+    --accent: #d50f3c;
+    --accent-strong: #ff1147;
+    --bg: #140941;
+    --good: limegreen;
+    --bad: darkred;
+}
+
 body {
     display: flex;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #d50f3c;
+    background-color: var(--accent);
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 header {
     margin-top: 10vh;
-    background-color: #140941;
-    color: #ff1147;
+    background-color: var(--bg);
+    color: var(--accent-strong);
     padding: 50px 100px;
     border-radius: 15px;
     font-family: 'Poppins', sans-serif;
@@ -22,14 +34,23 @@ header {
     box-shadow: 0 5px 15px rgba(20, 9, 65, .4);
 }
 
+h3 a {
+    color: var(--accent-strong);
+    transition: all 0.3s ease-in;
+}
+
+h3 a:hover {
+    color: white;
+}
+
 .linea-bonita {
     width: 150px;
     height: 3px;
     margin-top: 0;
     margin-left: 300px;
     border-radius: 3px;
-    color: #d50f3c;
-    background-color: #d50f3c;
+    color: var(--accent);
+    background-color: var(--accent);
     filter: drop-shadow(5px 5px 0.70rem #03010d);
 }
 
@@ -41,7 +62,7 @@ h1 {
 
 section {
     margin-top: 5vh;
-    background-color: #140941;
+    background-color: var(--bg);
     color: #fefdfb;
     padding: 50px 50px;
     border-radius: 15px;
@@ -63,7 +84,7 @@ ul {
 }
 
 ul li {
-    border: 3px solid #ff1147;
+    border: 3px solid var(--accent-strong);
     border-radius: 5px;
     padding: 10px 20px;
     margin-left: -30px;
@@ -81,18 +102,20 @@ ul li p {
     right: 40px;
     bottom: 40px;
     padding: 0 20px;
-    background-color: #140941;
-    color: #ff1147;
+    background-color: var(--bg);
+    color: var(--accent-strong);
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    border: 3px solid #ff1147;
+    border: 3px solid var(--accent-strong);
     box-shadow: 0 5px 15px rgba(20, 9, 65, .4);
     font-size: 16px;
     transition: all 0.1s ease-in;
 }
 
 .nueva-task:hover {
-    background-color: #2b138d;
+    color: white;
+    background-color: var(--good);
+    border-color: white;
     font-size: 18px;
     right: 33px;
     bottom: 35px;
@@ -112,17 +135,22 @@ ul li p {
 
 .editar-task,
 .eliminar-task {
-    background-color: #140941;
+    background-color: var(--bg);
     color: white;
     border-radius: 5px;
-    border: 2px solid #ff1147;
+    border: 2px solid var(--accent-strong);
     transition: all 0.1s ease-in;
     padding: 5px 10px;
 }
 
-.editar-task:hover,
+.editar-task:hover {
+    color: white;
+    background-color: var(--good);
+    border-color: white;
+}
+
 .eliminar-task:hover {
-    background-color: #2b138d;
+    background-color: var(--bad);
 }
 
 .hidden {
