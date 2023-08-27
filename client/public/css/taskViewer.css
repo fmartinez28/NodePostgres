@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d50f3c;
+}
+
+header {
+    margin-top: 10vh;
+    background-color: #140941;
+    color: #ff1147;
+    padding: 50px 100px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    overflow: clip;
+    width: 400px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(20, 9, 65, .4);
+}
+
+.linea-bonita {
+    width: 150px;
+    height: 3px;
+    margin-top: 0;
+    margin-left: 300px;
+    border-radius: 3px;
+    color: #d50f3c;
+    background-color: #d50f3c;
+    filter: drop-shadow(5px 5px 0.70rem #03010d);
+}
+
+h1 {
+    margin: 0;
+    filter: drop-shadow(5px 5px 0.70rem #03010d);
+    padding-right: 40px;
+}
+
+section {
+    margin-top: 5vh;
+    background-color: #140941;
+    color: #fefdfb;
+    padding: 50px 50px;
+    border-radius: 15px;
+    overflow: auto;
+    justify-content: left;
+    width: 500px;
+    font-family: Lato, sans-serif;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    filter: drop-shadow(5px 5px 0.70rem #03010d);
+    margin-bottom: 50px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    border: 3px solid #ff1147;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: -30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(3, 1, 13, .6);
+}
+
+ul li p {
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.nueva-task {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    padding: 0 20px;
+    background-color: #140941;
+    color: #ff1147;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    border: 3px solid #ff1147;
+    box-shadow: 0 5px 15px rgba(20, 9, 65, .4);
+    font-size: 16px;
+    transition: all 0.1s ease-in;
+}
+
+.nueva-task:hover {
+    background-color: #2b138d;
+    font-size: 18px;
+    right: 33px;
+    bottom: 35px;
+}
+
+.botones-tasks {
+    margin-left: 255px;
+    margin-bottom: 15px;
+}
+
+.editar-task,
+.eliminar-task {
+    padding: 5px;
+    padding-right: 12px;
+    margin-right: 10px;
+    background-color: #140941;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #ff1147;
+    transition: all 0.1s ease-in;
+}
+
+.editar-task:hover,
+.eliminar-task:hover {
+    background-color: #2b138d;
+}
